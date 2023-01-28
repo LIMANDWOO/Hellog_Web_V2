@@ -1,3 +1,5 @@
+import MainNavBar from "@/components/common/NavBar/MainNavBar";
+
 interface Props {
   children: React.ReactNode;
 }
@@ -5,7 +7,7 @@ interface Props {
 const RootLayout = ({ children }: Props) => {
   return (
     <div>
-      <div>homeNav</div>
+      <MainNavBar />
       {children}
     </div>
   );
