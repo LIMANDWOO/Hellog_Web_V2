@@ -1,5 +1,7 @@
-const Home = () => {
-  return <div>home</div>;
+import Main from "@/components/views/main";
+
+const MainPage = () => {
+  return <Main />;
 };
 
-export default Home;
+export default MainPage;

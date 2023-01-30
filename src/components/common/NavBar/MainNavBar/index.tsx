@@ -1,5 +1,11 @@
+import { MainNavBarContainer, MainNavBarWrap } from "./style";
+
 const MainNavBar = () => {
-  return <div>mainNavBar</div>;
+  return (
+    <MainNavBarContainer>
+      <MainNavBarWrap>mainNavBar</MainNavBarWrap>
+    </MainNavBarContainer>
+  );
 };
 
 export default MainNavBar;

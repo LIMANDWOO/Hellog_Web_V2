@@ -1,35 +1,19 @@
-import { useState } from "react";
-import { Hydrate, QueryClient, QueryClientProvider } from "react-query";
 import { SessionProvider } from "next-auth/react";
 import { RecoilRoot } from "recoil";
+import QueryClientProvider from "./QueryClientProvider";
+import StyledComponentsProvider from "./StyledComponentsProvider";
 
 interface Props {
   children: React.ReactNode;
-  pageProps: any;
 }
 
-const queryClientInitializer = () => {
-  const queryClient: QueryClient = new QueryClient({
-    defaultOptions: {
-      queries: {
-        retry: false,
-        refetchOnWindowFocus: false,
-      },
-    },
-  });
-
-  return queryClient;
-};
-
-const ProviderContainer = ({ children, pageProps }: Props) => {
-  const [queryClient] = useState(queryClientInitializer);
-
+const ProviderContainer = ({ children }: Props) => {
   return (
-    <SessionProvider session={pageProps}>
-      <QueryClientProvider client={queryClient}>
-        <Hydrate state={pageProps.dehydratedState}>
-          <RecoilRoot>{children}</RecoilRoot>
-        </Hydrate>
+    <SessionProvider>
+      <QueryClientProvider>
+        <RecoilRoot>
+          <StyledComponentsProvider>{children}</StyledComponentsProvider>
+        </RecoilRoot>
       </QueryClientProvider>
     </SessionProvider>
   );

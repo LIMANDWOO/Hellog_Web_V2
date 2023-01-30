@@ -1,16 +1,20 @@
+"use client";
+
+import Flex from "@/components/common/Flex";
 import MainNavBar from "@/components/common/NavBar/MainNavBar";
+import "@/styles/reset.css";
 
 interface Props {
   children: React.ReactNode;
 }
 
-const RootLayout = ({ children }: Props) => {
+const MainLayout = ({ children }: Props) => {
   return (
-    <div>
+    <Flex customStyle={{ width: "100%", height: "100vh" }} direction="column">
       <MainNavBar />
       {children}
-    </div>
+    </Flex>
   );
 };
 
-export default RootLayout;
+export default MainLayout;
