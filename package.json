@@ -22,6 +22,8 @@
     "next": "13.1.5",
     "next-auth": "^4.18.10",
     "next-cookies": "^2.0.3",
+    "next-images": "^1.8.4",
+    "plaiceholder": "^2.5.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-query": "^3.39.3",

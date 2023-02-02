@@ -2,7 +2,6 @@
 
 import Flex from "@/components/common/Flex";
 import MainNavBar from "@/components/common/NavBar/MainNavBar";
-import "@/styles/reset.css";
 
 interface Props {
   children: React.ReactNode;
@@ -10,7 +9,14 @@ interface Props {
 
 const MainLayout = ({ children }: Props) => {
   return (
-    <Flex customStyle={{ width: "100%", height: "100vh" }} direction="column">
+    <Flex
+      customStyle={{
+        width: "100%",
+        minHeight: "100vh",
+        backgroundColor: "#f3f5f7",
+      }}
+      direction="column"
+    >
       <MainNavBar />
       {children}
     </Flex>

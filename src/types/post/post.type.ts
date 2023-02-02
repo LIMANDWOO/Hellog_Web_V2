@@ -1,6 +1,10 @@
 import { User, UserInfo } from "../user/user.type";
 
 export interface Post {
+  title: string;
+  content: string;
+  summary: string;
+  thumbnail_url: string;
   comments: PostComment[];
   readonly id: number;
   status: "ACTIVE" | "BANNED";

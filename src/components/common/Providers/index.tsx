@@ -7,7 +7,7 @@ interface Props {
   children: React.ReactNode;
 }
 
-const ProviderContainer = ({ children }: Props) => {
+const Providers = ({ children }: Props) => {
   return (
     <SessionProvider>
       <QueryClientProvider>
@@ -19,4 +19,4 @@ const ProviderContainer = ({ children }: Props) => {
   );
 };
 
-export default ProviderContainer;
+export default Providers;
