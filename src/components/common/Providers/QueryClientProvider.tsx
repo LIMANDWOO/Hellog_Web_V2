@@ -2,7 +2,7 @@ import React from "react";
 import {
   QueryClient,
   QueryClientProvider as ReactQueryClientProvicer,
-} from "react-query";
+} from "@tanstack/react-query";
 
 interface Props {
   children: React.ReactNode;

@@ -11,6 +11,7 @@
   "dependencies": {
     "@next/font": "13.1.5",
     "@react-icons/all-files": "^4.1.0",
+    "@tanstack/react-query": "^4.24.4",
     "@toast-ui/editor": "^3.2.1",
     "@toast-ui/react-editor": "^3.2.2",
     "@types/uuid": "^9.0.0",
@@ -26,7 +27,6 @@
     "plaiceholder": "^2.5.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-query": "^3.39.3",
     "react-toastify": "^9.1.1",
     "recoil": "^0.7.6",
     "styled-components": "^6.0.0-beta.6",
